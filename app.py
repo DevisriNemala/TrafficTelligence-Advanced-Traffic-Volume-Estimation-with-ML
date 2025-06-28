@@ -34,7 +34,7 @@ def predict():
         prediction = pipeline.predict(input_data)[0]
         prediction = round(prediction)
 
-        if prediction > 5000:
+        if prediction > 3000:
             return render_template("chance.html", prediction_text=f"Estimated Traffic Volume: {prediction}")
         else:
             return render_template("noChance.html", prediction_text=f"Estimated Traffic Volume: {prediction}")
